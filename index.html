@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraTrade - On-Chain Trading Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="stage-container">
+        <!-- Starfield Canvas -->
+        <canvas id="starfield"></canvas>
+
+        <!-- Glow Video -->
+        <video id="glow-video" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e859f229-8ebd-43fb-a5a0-58006ba75327.mp4" autoplay muted loop playsinline></video>
+
+        <!-- UI Layer -->
+        <div class="ui-layer">
+            <!-- Nav -->
+            <nav>
+                <a href="#" class="logo">
+                    <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    AuraTrade
+                </a>
+                <div class="nav-menu">
+                    <a class="nav-item active" onclick="switchTab('home', event)">Home</a>
+                    <a class="nav-item" onclick="switchTab('ecosystem', event)">Ecosystem</a>
+                    <a class="nav-item" onclick="switchTab('markets', event)">Markets</a>
+                    <a class="nav-item" onclick="switchTab('governance', event)">Governance</a>
+                    <a class="nav-item" onclick="switchTab('analytics', event)">Analytics</a>
+                </div>
+                <button class="btn-primary">Connect Wallet</button>
+            </nav>
+
+            <!-- Hero Dynamic Section -->
+            <div class="hero" id="hero-content">
+                <h1>Trade Smarter, <span>Faster, Safer.</span></h1>
+                <p class="lede">The first fully integrated on-chain trading experience. No dashboards, no delays — AuraTrade empowers you to trade directly from your favorite DeFi apps and terminals.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Get Started</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Panel Dynamic Container -->
+            <div class="dashboard-panel" id="dashboard-content">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-top">
+                        <div class="sidebar-brand">AuraTrade Terminal</div>
+                        <div class="nav-links">
+                            <a href="#" class="side-link" style="color:var(--text); background:rgba(147,18,255,0.15)">Live Overview</a>
+                            <a href="#" class="side-link">Order Book</a>
+                            <a href="#" class="side-link">Liquidity Pools</a>
+                        </div>
+                    </div>
+                    <div class="pro-card">
+                        <span>AuraTrade Pro v2.4</span>
+                        <button class="btn-primary" style="padding: 5px; font-size: 11px;">Active Node</button>
+                    </div>
+                </div>
+
+                <!-- Main Content (Default Home View) -->
+                <div class="dash-main">
+                    <div class="dash-topbar">
+                        <span style="font-size: 12px; color: var(--muted);">Overview & Live Analytics</span>
+                        <div class="user-badge">
+                            <div class="user-dot"></div>
+                            <span>Alex T. 0x3f4…9c7e</span>
+                        </div>
+                    </div>
+
+                    <div class="custom-grid-2">
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <span>Revenue generated (since inception)</span>
+                                <span style="color: var(--green)">+12.5%</span>
+                            </div>
+                            <div style="font-size: 24px; font-weight: 700; font-family: 'Space Grotesk', sans-serif;">214,402 <span style="font-size:14px; color:var(--muted)">USDT</span></div>
+                            <svg viewBox="0 0 300 50" width="100%" height="30" preserveAspectRatio="none" style="margin-top:10px;">
+                                <path d="M0 40 Q 75 10, 150 25 T 300 10 L 300 50 L 0 50 Z" fill="rgba(147,18,255,0.2)"/>
+                                <path d="M0 40 Q 75 10, 150 25 T 300 10" fill="none" stroke="#9312ff" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <span>Monthly Performance Metrics</span>
+                                <span style="color: var(--violet-glow)">January 2024</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;">
+                                <div style="display:flex; justify-content:space-between;"><span>Total Snipes:</span> <span style="font-weight:600">1,284 (+8.4%)</span></div>
+                                <div style="display:flex; justify-content:space-between;"><span>Avg. Execution:</span> <span style="font-weight:600">0.42s</span></div>
+                                <div style="display:flex; justify-content:between;"><span>Win Rate:</span> <span style="font-weight:600; color:var(--green)">68.2%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
